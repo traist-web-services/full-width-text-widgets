@@ -6,7 +6,6 @@ const fontLoadingPromises = fontList.filter(f => f !== 'inherit').map(font => do
 
 Promise.all(fontLoadingPromises)
   .then(() => {
-    console.log('All fonts loaded')
     if (!isFacebookApp()) {
       resizeAllFullWidthText()
     }
