@@ -16,6 +16,6 @@ module.exports = {
     }
   }
 }
-```
+````
 
 You are responsible for loading the fonts yourself!
