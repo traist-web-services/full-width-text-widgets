@@ -18,7 +18,6 @@ module.exports = {
   },
   skipInitialModal: true,
   construct(self, options) {
-    console.log(options.fonts)
     const styles = options.fonts.map((font) => {
       return {
         name: font,
