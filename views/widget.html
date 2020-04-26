@@ -1,0 +1,19 @@
+<div class="c-card__full-width-text">
+  <div>
+    <!-- If the parent element of the fitty element has horizontal padding the width calculation will be incorrect. -->
+    <div class="fittext">
+      <div
+        style="font-family: {{ data.widget.font if data.widget.font else 'inherit' }}; {{ 'text-transform: uppercase;' if data.widget.forceUppercase}}"
+      >
+        {{ apos.singleton(data.widget, 'textContent', 'apostrophe-rich-text',
+          {
+            toolbar: ['Styles', 'Bold', 'Italic', 'Link', 'Unlink'], 
+            controls: { 
+              position: 'bottom-right'
+            },
+            styles: apos.fwtw.fontStyles
+          }) }}
+      </div>
+    </div>
+  </div>
+</div>
