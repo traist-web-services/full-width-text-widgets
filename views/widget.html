@@ -1,19 +1,59 @@
+<style>
+  {{ apos.fwtw.styleDeclarations | safe }}
+</style>
+
 <div class="c-card__full-width-text">
-  <div>
-    <!-- If the parent element of the fitty element has horizontal padding the width calculation will be incorrect. -->
     <div class="fittext">
       <div
-        style="font-family: {{ data.widget.font if data.widget.font else 'inherit' }}; {{ 'text-transform: uppercase;' if data.widget.forceUppercase}}"
+        style="{{ 'text-transform: uppercase;' if data.widget.forceUppercase}}"
       >
-        {{ apos.singleton(data.widget, 'textContent', 'apostrophe-rich-text',
+        {{ apos.singleton(
+          data.widget, 
+          'textContent', 
+          'apostrophe-rich-text',
           {
-            toolbar: ['Styles', 'Bold', 'Italic', 'Link', 'Unlink'], 
-            controls: { 
+            toolbar: ['styles', 'bold', 'italic', 'link'],
+            styles: apos.fwtw.fontStyles,
+            controls: {
               position: 'bottom-right'
-            },
-            styles: apos.fwtw.fontStyles
-          }) }}
+            }
+          }
+        )
+      }}
       </div>
-    </div>
   </div>
 </div>
+<!--  
+apos.fwtw.fontStyles
+[{ 
+            label: 'Default', 
+            tag: 'p' },
+  {
+    label: 'Dancing Script',
+    tag: 'p',
+    class: 'c-full-width-text__text--Dancing0'
+  },
+  {
+    label: 'Darker Grotesque',
+    tag: 'p',
+    class: 'c-full-width-text__text--Darker1'
+  },
+  {
+    label: 'Leckerli One',
+    tag: 'p',
+    class: 'c-full-width-text__text--Leckerli2'
+  },
+  {
+    label: 'Meddon',
+    tag: 'p',
+    class: 'c-full-width-text__text--Meddon3'
+  }
+
+  , {
+            label: 'Dancing Script',
+            tag: 'p',
+            'class': 'c-full-width-text__text--Dancing0'
+          }]
+]
+
+-->
