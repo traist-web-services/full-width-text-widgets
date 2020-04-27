@@ -14,7 +14,7 @@ Promise.all(fontLoadingPromises)
 function resizeAllFullWidthText () {
   const options = {
     minSize: 12,
-    maxSize: 300
+    maxSize: 100
   }
   document.querySelectorAll('.fittext').forEach(el => {
     fitty(el, options)
