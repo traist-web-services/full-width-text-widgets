@@ -2,6 +2,7 @@ module.exports = {
   alias: 'fwtw',
   extend: "apostrophe-widgets",
   label: "Full Width Text",
+  contextualOnly: true,
   beforeConstruct(self, options) {
     if (!options.addFields) {
       options.addFields = [] 
