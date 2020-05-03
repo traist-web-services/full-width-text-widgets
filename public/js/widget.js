@@ -3,9 +3,11 @@ apos.on('enhance', resizeAllFullWidthText)
 const fontList = styleInPage('fontFamily');
 // Get a list of fonts in use
 const fontLoadingPromises = fontList.filter(f => f !== 'inherit').map(font => document.fonts.load(`16px ${font}`));
+document.querySelector('body').style.transitionDuration = "1.2s";
 
 Promise.all(fontLoadingPromises)
   .then(() => {
+    document.querySelector('body').style.opacity = 1;
     if (!isFacebookApp()) {
       resizeAllFullWidthText()
     }
